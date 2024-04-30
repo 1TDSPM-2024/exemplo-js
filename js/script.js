@@ -4,16 +4,32 @@
 console.log("Olá Mundo!")
 
 //Capturar o botao pelo id e atrelar a ele um evento de click
-const btnElemento = document.getElementById("botao");
-btnElemento.addEventListener("click", function () {
-    console.log("Botão testado!")
-})
-
+//const btnElemento = document.getElementById("botao");
+//btnElemento.addEventListener("click", function () {
+//    console.log("Botão testado!")
+//})
 
 
 //1.Declaração de variáveis
+// var nome = "João";
+// let sobrenome = "Silva";
+//  console.log("Nome completo : " + nome +" "+ sobrenome);
+// //2.Declaração de constantes
+// const idade = 20;
+// console.log("Idade : " + idade);
+// idade = 21;
+
 
 //2.Hoisting
+
+//var nome = "Joao"
+
+//if(true){
+//    let nome = "Silva"
+//}
+
+//console.log(nome)
+
  
 //3.Tipos de dados
  
