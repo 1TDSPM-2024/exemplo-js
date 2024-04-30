@@ -1,6 +1,15 @@
 
 
 //JavaScript básico tópicos
+console.log("Olá Mundo!")
+
+//Capturar o botao pelo id e atrelar a ele um evento de click
+const btnElemento = document.getElementById("botao");
+btnElemento.addEventListener("click", function () {
+    console.log("Botão testado!")
+})
+
+
 
 //1.Declaração de variáveis
 
