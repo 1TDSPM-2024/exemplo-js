@@ -33,12 +33,34 @@
 
 
 //4.Tipos de dados
- 
+
+let tiposDeDados = [
+    "Number",
+    "String",
+    "Boolean",
+    "Null",
+    "Undefined",
+    "Object",
+    "Array",
+    "Function"
+]
+
+console.table(tiposDeDados)
+
 //5.Operadores
  
 //6.Estruturas condicionais
 
 //7.Estruturas de repetição
+
+let listaTiposDados = document.getElementById("tipo-dados");
+
+tiposDeDados.forEach((tipo)=>{
+    let itemLista = document.createElement("li");
+    itemLista.innerText = tipo;
+    listaTiposDados.appendChild(itemLista)
+});
+
 
 //8.Funções
 
