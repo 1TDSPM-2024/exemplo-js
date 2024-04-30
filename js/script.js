@@ -1,7 +1,12 @@
-
+//prestar atençao no efeito cascata
 
 //JavaScript básico tópicos
-
+console.log("Olá JOVEMM");
+//Capturar o botão pelo ID e atrelar a ele um evento de click.
+const btnElemento = document.getElementById("botao");
+btnElemento.addEventListener("click",function () {
+    console.log("BOTÃO TESTADO. ");
+});//mostra o evento e parametro
 //1.Declaração de variáveis
 
 //2.Hoisting
