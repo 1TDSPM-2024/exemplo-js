@@ -10,9 +10,24 @@
 // });
 
 //1.Declaração de variáveis
+// var nome = "João";
+// let sobrenome = "Silva";
+//  console.log("Nome completo : " + nome +" "+ sobrenome);
+// //2.Declaração de constantes
+// const idade = 20;
+// console.log("Idade : " + idade);
+// idade = 21;
 
 //2.Hoisting
- 
+//Diferença entre var e let
+// var nome = "João";
+
+// if(true){
+//     let nome = "Silva";
+// }
+
+// console.log(nome);
+
 //3.Tipos de dados
  
 //4.Operadores
