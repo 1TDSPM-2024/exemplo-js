@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/estilo.css" />
     <title>JavaScript</title>
+
     <script src="./js/script.js" defer></script>
   </head>
 
@@ -19,8 +20,55 @@
         </ul>
       </nav>
     </header>
+    <!-- <div>
+        <ul id="tipo-dados">
+          
+        </ul>
+    </div> -->
     <div>
-      <ul id="tipo-dados"></ul>
+      <h2>VALIDAÇÃO</h2>
+      <div>
+        <form
+          action="#"
+          method="get"
+          onsubmit="return validacao(this.idEmail,this.idSenha)"
+        >
+          <fieldset>
+            <legend>LOGIN</legend>
+            <div>
+              <label for="idEmail">Email</label>
+              <input
+                type="email"
+                name="txtEmail"
+                id="idEmail"
+                placeholder="Digite seu email"
+              />
+            </div>
+            <div>
+              <label for="idSenha">Senha</label>
+              <input
+                type="password"
+                name="txtSenha"
+                id="idSenha"
+                placeholder="Digite sua senha"
+              />
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                name="txtLembrar"
+                id="idLembrar"
+                value="lembrete"
+                checked
+              />
+              <label for="idLembrar">Lembrar-me</label>
+            </div>
+            <div>
+              <button type="submit">Enviar</button>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
   </body>
 </html>
