@@ -25,13 +25,16 @@
         </nav>
     </header> 
 
-    <div>
-        <ul id="tipo-dados"></ul>
-    </div>
+    <!-- <div>
+        <ul id="tipo-dados">
+          
+        </ul>
+    </div> -->
+
       <div>
         <h2>VALIDAÇÃO</h2>
         <div>
-            <form action="#" method="post" onsubmit="return false">
+            <form action="#" method="get" onsubmit="return validacao(this.idEmail,this.idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
                     <div>
@@ -53,5 +56,11 @@
             </form>
         </div>
     </div>
+
+    <!-- <div>
+        <a href="./status/erro.html?nome=Ale&idade=48">QueryString</a>
+        
+    </div> -->
+
 </body>                     
 </html>
