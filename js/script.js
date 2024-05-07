@@ -10,18 +10,18 @@
 // });
 
 
-// //1.Declaração de variáveis
+// --------- 1.Declaração de variáveis
 // var nome = "João";
 // let sobrenome = "Silva";
 // console.log("Nome completo: " + nome + sobrenome);
 
-// //2.Declaração de constantes
+// --------- 2.Declaração de constantes
 
 // const idade = 20;
 // console.log("Idade: " + idade);
 
 
-//3.Hoisting
+// --------- 3.Hoisting
 // diferença entre var e let
 // var nome = "João";
 
@@ -32,42 +32,82 @@
 // console.log(nome);
 
 
-//4.Tipos de dados
+// --------- 4.Tipos de dados
 
-let tiposDeDados = [
-    "Number",
-    "String",
-    "Boolean",
-    "Null",
-    "Undefined",
-    "Object",
-    "Array",
-    "Function"
-]
+// let tiposDeDados = [
+//     "Number",
+//     "String",
+//     "Boolean",
+//     "Null",
+//     "Undefined",
+//     "Object",
+//     "Array",
+//     "Function"
+// ]
 
-console.table(tiposDeDados)
+// console.table(tiposDeDados)
 
-//5.Operadores
+// --------- 5.Operadores
  
-//6.Estruturas condicionais
+// --------- 6.Estruturas condicionais
 
-//7.Estruturas de repetição
+// --------- 7.Estruturas de repetição
 
-let listaTiposDados = document.getElementById("tipo-dados");
+// let listaTiposDados = document.getElementById("tipo-dados");
 
-tiposDeDados.forEach((tipo)=>{
-    let itemLista = document.createElement("li");
-    itemLista.innerText = tipo;
-    listaTiposDados.appendChild(itemLista)
-});
+// tiposDeDados.forEach((tipo)=>{
+//     // cria <li> como itemLista
+//     let itemLista = document.createElement("li");
+//     // adiciona o texto dentro da <li>
+//     itemLista.innerText = tipo;
+//     // adiciona o <li> na <ul>
+//     listaTiposDados.appendChild(itemLista)
+// });
 
 
-//8.Funções
+// --------- 8.Funções
 
-//9.Arrays
+// function soma(a,b){
+//     if((a+b) >= 10){
+//         console.log(`A soma de ${a} e ${b} é >= 10.`);
+//         return true;
+//     } else {
+//         console.log(`A soma de ${a} e ${b} é < 10.`);
+//         return false;
+//     }
+// }
 
-//10.Objetos
+// transferindo para ARROW FUNCTION
 
-//11.Funções de array
+// const soma = (a,b)=>{
+//     if((a+b) >= 10){
+//         console.log(`A soma de ${a} e ${b} é >= 10.`);
+//         return true;
+//     } else {
+//         console.log(`A soma de ${a} e ${b} é < 10.`);
+//         return false;
+//     }
+// }
+
+
+// RECUPERAR CAMPOS DO FORMULARIO -> querySelector
+
+const inputEmail = document.querySelector("#idEmail")
+const inputSenha = document.querySelector("#idSenha")
+
+function validacao(inputEmail, inputSenha){
+
+    if((inputEmail.value == "") && (inputSenha.value == "")){
+        alert("É necessário preencher os campos obrigatórios.")
+        return false;
+    }
+    return true;
+}
+
+// --------- 9.Arrays
+
+// --------- 10.Objetos
+
+// --------- 11.Funções de array
 
 
