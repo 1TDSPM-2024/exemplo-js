@@ -103,8 +103,8 @@
 // const inputSenha = document.querySelector("#idSenha");
 
 function validacao(inputEmail,inputSenha) {
-console.log(inputEmail.value);
 
+    //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento. Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha
 
     if((inputEmail.value == "") && (inputSenha.value == "")){
         alert("O preenchimento dos campos são obrigatórios.");
@@ -118,7 +118,25 @@ console.log(inputEmail.value);
 
 //8.Arrays
 
+
+
 //9.Objetos
+// let usuario = {
+//     emailUsuario : "jo@email.com",
+//     senhaUsuario : "123456",
+//     nomeCompleto : "João da Silva"
+// }
+// console.log(usuario.nomeCompleto = ", você está logado com o seu email: "= usuario.emailUsuario);
+
+// let propsVariavel = "emailUsuario";
+// console.log(usuario["nomeCompleto"] = ", você está logado com o seu email: "= usuario[propsVariavel]);
+// usuario = (...usuario, idade:20, regiao:"São Paulo" );
+
+// console.log(usuario);
+
+//Destruturing
+// const{emailUsuario,idade,regiao}=usuario;
+// console.log('Email do Usuário: $[emailUsuario]');
 
 //10.Funções de array
 
