@@ -108,6 +108,11 @@ function validacao(inputEmail,inputSenha) {
     //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
     //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha.
 
+    let usuario = {
+        emailUsuario : inputEmail.value,
+        senhaUsuario : inputSenha.value
+    };
+
     if((inputEmail.value == "") && (inputSenha.value == "")){
         alert("O preenchimento dos campos são obrigatórios.");
         return false;
