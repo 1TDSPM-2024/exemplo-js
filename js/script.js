@@ -120,6 +120,17 @@ function validacao(inputEmail,inputSenha) {
     return true;
 }
 
+let usuario = {
+    emailUsuario : "vitorisac14@gmail.com",
+    senhaUsuario : "carlos123456",
+    nomeCompleto : "vitor isac belucci"
+}
+
+let propsVariavel = "emailUsuario"
+console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel])
+
+console.log(usuario)
+
 
 //8.Arrays
 
