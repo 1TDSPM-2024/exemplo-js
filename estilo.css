@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 48px;
+    text-align: center;
+    padding: 20px;
+    background-color: red; /* Cor inicial */
+    background-color: #2f992f;
+    color: rgb(255, 255, 255);
+    transition: background-color 4s;
+    max-width: max-content;
+    margin: auto; 
+    border-radius: 8px;
+  }
+
+form{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    border: solid rgb(255, 0, 0) 2px;
+    border-radius: 10px;
+    background-image: url(https://th.bing.com/th/id/OIP.WkHWiqa8PtzvtrPGixIwLAHaEo?rs=1&pid=ImgDetMain);
+}
+form:hover{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    border: solid rgb(0, 0, 0) 2px;
+    border-radius: 10px;
+    background-image: url(https://th.bing.com/th/id/OIP.RQRxHi61xrIEcZGT-E_nhwHaFn?rs=1&pid=ImgDetMain);
+    cursor: pointer;
+    transition: 10s;
+}
+input{
+    background-color: #2f992f;
+    border-radius: 50px;
+}
+button{
+  margin: auto;
+  border-radius: 30px;
+}
