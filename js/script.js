@@ -101,26 +101,55 @@
 
 // const inputEmail = document.querySelector("#idEmail");
 // const inputSenha = document.querySelector("#idSenha");
-
 function validacao(inputEmail,inputSenha) {
-    console.log(inputEmail.value);
+
+    //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
+    //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento
+    //após a validação adicione uma nova propriedade ao objeto de nome completo com o valor de sua escolha
     
-    
-        if((inputEmail.value == "") && (inputSenha.value == "")){
-            alert("O preenchimento dos campos são obrigatórios.");
-            return false;
-        }
-        return true;
+    let usuario =  {
+        emailUsuario : inputEmail.value,
+        senhaUsuario : inputSenha.value
+    };
+
+    usuario = {...usuario, emailUsuario, senhaUsuario};
+
+    if((inputEmail.value == "") && (inputSenha.value == "")){
+        alert("O preenchimento dos campos são obrigatórios.");
+        return false;
     }
+    return true;
+    
+// const{emailUsuario,senhaUsuario}=usuario;
+// console.log(`E-mail do Usuário: ${emailUsuario}`);
+// console.log(`Senha do Usuário: ${senhaUsuario}`);
+// usuario = {...usuario, emailUsuario, senhaUsuario};
+ }
     
     
+//8.Arrays
     
+//9.Objetos
+// let usuario = {
+//     emailUsuario : "jo@email.com",
+//     senhaUsuario : "123456",
+//     nomeCompleto : "João da Silva"
+// }
+// console.log(usuario.nomeCompleto + ", você está logado com o seu email: "+ usuario.emailUsuario);
     
-    //8.Arrays
+// let propsVariavel = "emailUsuario";
+// console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel]);
+// console.log(usuario);
     
-    //9.Objetos
+// //OPERADOR SPREAD( ... )
+// usuario = {...usuario, idade:20 , regiao:"São Paulo"};
     
-    //10.Funções de array
+// console.log(usuario);
     
+// //Destructuring
+// const{emailUsuario,idade,regiao}=usuario;
+// console.log(`E-mail do Usuário: ${emailUsuario}`);
+// console.log(`Idade do Usuário: ${idade}`);
+// console.log(`Região de Residência: ${regiao}`);
     
-    
+//10.Funções de array
