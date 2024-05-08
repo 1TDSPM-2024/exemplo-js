@@ -118,6 +118,8 @@ function validacao(inputEmail,inputSenha) {
 
 //8.Arrays
 
+
+
 // //9.Objetos
 // let usuario = {
 //     emailUsuario : "jo@email.com",
