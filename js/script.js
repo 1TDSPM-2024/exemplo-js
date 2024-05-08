@@ -103,7 +103,6 @@
 // const inputSenha = document.querySelector("#idSenha");
 
 function validacao(inputEmail,inputSenha) {
-    console.log(inputEmail.value);
     
     
         if((inputEmail.value == "") && (inputSenha.value == "")){
@@ -113,14 +112,44 @@ function validacao(inputEmail,inputSenha) {
         return true;
     }
     
+    let usuario = {
+        emailUsuario : "murillo@gmail.com",
+        senhaUsuario : "AriToledo",
+        nomeCompleto : "Murillo Ari Fereira Sant'Anna"
+    }
     
+    let propsVariavel = "emailUsuario"
+    console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel])
+
+    console.log(usuario)
+
+
+    // //8.Arrays
     
+    // //9.Objetos
+
+    // let usuario = {
+    //     emailUsuario : "jo@email.com",
+    //     senhaUsuario : "123456",
+    //     nomeCompleto : "João da Silva"
+    // }
+    // // console.log(usuario.nomeCompleto + ", você está logado com o seu email: "+ usuario.emailUsuario);
     
-    //8.Arrays
+    // // let propsVariavel = "emailUsuario";
+    // // console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel]);
+
+    // console.log(usuario);
+
+    // //OPERADOR SPREAD( ... )
+    // usuario = {...usuario, idade:20 , regiao:"São Paulo"}
     
-    //9.Objetos
-    
+    // //Destructuring
+    // const{emailUsuario,idade,regiao}=usuario;
+    // console.log(`E-mail do Usuário: ${emailUsuario}`);
+    // console.log(`Idade do Usuário: ${idade}`);
+    // console.log(`Região de Residência: ${regiao}`);
+
+
+
     //10.Funções de array
-    
-    
     
