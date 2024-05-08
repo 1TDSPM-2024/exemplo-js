@@ -103,14 +103,24 @@
 // const inputSenha = document.querySelector("#idSenha");
 
 function validacao(inputEmail,inputSenha) {
-console.log(inputEmail.value);
 
+    //Recupere os dados dos campos e adione em um objeto de nome usuário e desestruture o objeto
+    //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimentos.
+    //Após a validação, adicione uma nova propriedade ao objeto de nomeCompleto com o valor de sua escolha 
 
     if((inputEmail.value == "") && (inputSenha.value == "")){
         alert("O preenchimento dos campos são obrigatórios.");
         return false;
+    }else{
+        let usuario = {
+            emailUsuario : inputEmail.value,
+            senhaUsuario : inputSenha.value
+        };
+        
+        const{emailUsuario, senhaUsuario}=usuario;
+        usuario = {...usuario, nomeCompleto: "Carlos"};
+        return true;
     }
-    return true;
 }
 
 
@@ -119,6 +129,29 @@ console.log(inputEmail.value);
 //8.Arrays
 
 //9.Objetos
+//let usuario = {
+    //emailUsuario : "jo@email.com",
+    //senhaUsuario : "123456",
+    //nomeCompleto : "João da Silva"
+//}
+//console.log(usuario.nomeCompleto + ", voce esta logado com o seu email" + usuario.emailUsuario);
+
+//let propsVariavel = "emailUsuario"
+//console.log(usuario["nomeCompleto"] + ", voce esta logado com o seu email" + usuario[propsVariavel]);
+//console.log(usuario);
+
+//OPERADOR SPREAD( ... )
+    //Adicionar atributos em um objeto
+//usuario = {...usuario, idade:20, regiao:"São Paulo"};
+
+//console.log(usuario);
+
+//Destructuring
+    //Desistrutura para colocar em uma variavel ou separar atributos
+//const{emailUsuario,idade,regiao}=usuario;
+//console.log(`E-mail do Usuario: ${emailUsuario}`);
+//console.log(`Idade do Usuario: ${idade}`);
+//console.log(`Região do Usuario: ${regiao}`);
 
 //10.Funções de array
 
