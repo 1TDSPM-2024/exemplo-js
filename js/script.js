@@ -103,22 +103,56 @@
 // const inputSenha = document.querySelector("#idSenha");
 
 function validacao(inputEmail,inputSenha) {
-    console.log(inputEmail.value);
-    
-    
-        if((inputEmail.value == "") && (inputSenha.value == "")){
-            alert("O preenchimento dos campos são obrigatórios.");
-            return false;
-        }
-        return true;
+
+    //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
+    //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
+    //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha. 
+
+    let usuario = {
+        email: inputEmail.value,
+        senha: inputSenha.value
+    };
+
+    usuario = {...usuario, nomeCompleto: "Vitor"}
+
+    const{email,senha,nomeCompleto}=usuario;
+
+
+    if((inputEmail.value == "") && (inputSenha.value == "")){
+        alert("O preenchimento dos campos são obrigatórios.");
+        return false;
     }
+    return true;
+}
+
     
     
-    
-    
-    //8.Arrays
+    //8.Array
     
     //9.Objetos
+    // let usuario = {
+    //     emailUsuario: "jo@email.com",
+    //     senhaUsuario: "123456",
+    //     nomeCompleto: "João da Silva"
+    // }
+    // // console.log(usuario.nomeCompleto + ", você está logado com o seu email: " + + usuario.emailUsuario);
+
+    // // let propsVariavel = "emailUsuario";
+    // // console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel]);
+    // console.log(usuario);
+
+    // //OPERDOR SPREAD( ... ) serve pra adicionar coisas no objeto
+    // usuario = {...usuario, idade:20 , regiao:"São Paulo"};
+
+    // console.log(usuario);
+
+    // //Destructuring vc desestutura e pode so pegar as variaveis
+    // const{emailUsuario,idade,regiao}=usuario;
+    // console.log(`E-mail do Usuário: ${emailUsuario}`);
+    // console.log(`Idade do Usuário: ${idade}`);
+    // console.log(`Região do Usuário: ${regiao}`);
+    
+    
     
     //10.Funções de array
     
