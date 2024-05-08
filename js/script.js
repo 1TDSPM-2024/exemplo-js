@@ -92,13 +92,19 @@
 
 // RECUPERAR CAMPOS DO FORMULARIO -> querySelector
 
-const inputEmail = document.querySelector("#idEmail")
-const inputSenha = document.querySelector("#idSenha")
-
 function validacao(inputEmail, inputSenha){
 
+    let usuario = {
+        email: inputEmail.value,
+        senha: inputSenha.value
+    };
+
+    usuario = {...usuario, nomeCompleto:"Alê Gênio"};
+
+    const{email,senha,nomeCompleto}=usuario;
+
     if((inputEmail.value == "") && (inputSenha.value == "")){
-        alert("É necessário preencher os campos obrigatórios.")
+        alert("É necessário preencher os campos obrigatórios.");
         return false;
     }
     return true;
@@ -108,6 +114,32 @@ function validacao(inputEmail, inputSenha){
 
 // --------- 10.Objetos
 
-// --------- 11.Funções de array
+// let usuario = {
+//     emailUsuario: "jo@email.com",
+//     senhaUsuario: "123456",
+//     nomeCompleto: "João da Silva"
+// }
 
+// // console.log(usuario.nomeCompleto + 
+// //             ", você está logado com o e-mail " 
+// //             + usuario["emailUsuario"])
+
+// console.log(usuario);
+
+// // OPERADOR SPREAD( ... )
+
+// usuario = {...usuario, idade:20,regiao:"São Paulo"}
+
+// console.log(usuario);
+
+// DESTRUCTURING
+
+// const{emailUsuario,idade,regiao}=usuario;
+
+// console.log(`E-mail do Usuário: ${emailUsuario}`);
+// console.log(`Idade do Usuário: ${idade}`);
+// console.log(`Região de Residência: ${regiao}`);
+
+
+// --------- 11.Funções de array
 
