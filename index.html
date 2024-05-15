@@ -36,14 +36,18 @@
                     <legend>LOGIN</legend>
                     <div>
                         <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required minlength="7">
                     </div>
                     <div>
                         <label for="idSenha">Senha</label>
-                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
+                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha" required minlength="5">
                     </div>
                     <div>
-                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
+                        <label for="idCpf">CPF</label>
+                        <input type="text" name="txtCpf" id="idCpf" placeholder="Digite seu CPF" required minlength="11">
+                    </div>
+                    <div>
+                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked> 
                         <label for="idLembrar">Lembrar-me</label>
                     </div>
                     <div>
