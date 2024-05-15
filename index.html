@@ -35,18 +35,22 @@
         <h2>VALIDAÇÃO</h2>
         <div>
             <!--action ==> é para onde os dados serão enviados-->
-            <form action="#" method="get" onsubmit="return validacao(this.idEmail,this.idSenha)">
+            <form action="#" method="get" onsubmit="return validacao(idEmail,idSenha)">
                 <fieldset>
                     <legend>LOGIN</legend>
                     <div>
                         <label for="idEmail">Email</label>
                         <!--type ==> o tipo dele, name ==> o nome dele !o mais importante! / eles são atributos do input-->
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email">
+                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required minlength="7">
                     </div>
                     <div>
                         <label for="idSenha">Senha</label>
                         <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha">
                     </div>
+                    <!-- <div>
+                        <label for="idCpf">CPF</label>
+                        <input type="text" name="txtCpf" id="idCpf" placeholder="000.000.000-00" required minlength="11" maxlength="14" oninput="this.setCustomValidity('Digite a quantidade certa de caracteres')">
+                    </div> -->
                     <div>
                         <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked>
                         <label for="idLembrar">Lembrar-me</label>

@@ -108,23 +108,42 @@ function validacao(inputEmail,inputSenha) {
     //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimentos.
     //Após a validação, adicione uma nova propriedade ao objeto de nomeCompleto com o valor de sua escolha 
 
-    if((inputEmail.value == "") && (inputSenha.value == "")){
-        alert("O preenchimento dos campos são obrigatórios.");
-        return false;
-    }else{
-        let usuario = {
-            emailUsuario : inputEmail.value,
-            senhaUsuario : inputSenha.value
-        };
+    let listausuario = [
+        {nome: "João", genero:"m", email:"joao@email.com", senha:"12345"},
+        {nome: "Maria", genero:"f", email:"maria@email.com", senha:"12345"},
+        {nome: "Roberto", genero:"m", email:"roberto@email.com", senha:"12345"},
+        {nome: "Antonio", genero:"m", email:"antonio@email.com", senha:"12345"},
+        {nome: "Carlos", genero:"m", email:"carlos@email.com", senha:"12345"},
+    ];
+
+    let usuario = {
+        emailUsuario : inputEmail.value,
+        senhaUsuario : inputSenha.value
+    };
+
+    for (let x = 0; x < listausuario.length; x++){
+
+        if((inputEmail.value == listausuario[x].email) && (inputSenha.value == listausuario[x].senha)){
+            console.log("Usuario enontrado");
+            return true;
+        }else{
+            console.log("Usuario não enontrado");
+            return false;
+        }
         
-        const{emailUsuario, senhaUsuario}=usuario;
-        usuario = {...usuario, nomeCompleto: "Carlos"};
-        return true;
-    }
+    };
+ 
 }
 
-
-
+// document.getElementById('idCpf').addEventListener('input', function(e) {
+//     var value = e.target.value;
+//     var cpfPattern = value.replace(/\D/g, '')
+//                           .replace(/(\d{3})(\d)/, '$1.$2')
+//                           .replace(/(\d{3})(\d)/, '$1.$2')
+//                           .replace(/(\d{3})(\d)/, '$1-$2')
+//                           .replace(/(-\d{2})\d+?$/, '$1');
+//     e.target.value = cpfPattern;
+//   });
 
 //8.Arrays
 
