@@ -102,23 +102,44 @@
 // const inputEmail = document.querySelector("#idEmail");
 // const inputSenha = document.querySelector("#idSenha");
 
-function validacao(inputEmail,inputSenha) {
+// function validacao(inputEmail,inputSenha) {
 
-    //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
-    //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
-    //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha.
+//     //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
+//     //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
+//     //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha.
 
     let usuario = {
         emailUsuario : inputEmail.value,
-        senhaUsuario : inputSenha.value
+        senhaUsuario : inputSenha.value,
+        cpfUsuario : inputCpf.value
     };
 
-    if((inputEmail.value == "") && (inputSenha.value == "")){
-        alert("O preenchimento dos campos são obrigatórios.");
-        return false;
+//     if((inputEmail.value == "") && (inputSenha.value == "")){
+//         alert("O preenchimento dos campos são obrigatórios.");
+//         return false;
+//     }
+//     return false;
+// }
+
+const inputCpf = document.querySelector("#idCpf");
+inputCpf.addEventListener("onblur", ()=>{
+    mascaraCpf(this)
+})
+
+const mascaraCpf = (inputCpf)=>{
+    let count = 0;
+
+    for( const index of inputCpf) {
+        if(index == 3){
+            inputCpf.value.charact(index) = "."}
+        else if(index == 7){
+                inputCpf.value.charact(index) = "."}
+        else if(index == 11){
+                    inputCpf.value.charact(index) = "-"
+        }
     }
-    return true;
-}
+    
+}   
 
 
 //8.Arrays
