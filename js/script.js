@@ -162,4 +162,19 @@ console.log(usuario)
 
 //10.Funções de array
 
+const mascaraCpf () => {
+    const imputCpf = documento.querySelector("#idCpf");
+    let count = 0;
 
+    for (const caractere of inputCpf.value)
+        if (const caracter of inputCpf.value) {
+            if (count < 3){
+                inputCpf.value = intputCpf.value.replace(caractere,".");
+                count++;
+            }
+
+        }
+
+
+
+    }
