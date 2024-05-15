@@ -101,55 +101,54 @@
 
 // const inputEmail = document.querySelector("#idEmail");
 // const inputSenha = document.querySelector("#idSenha");
-function validacao(inputEmail,inputSenha) {
 
-    //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
-    //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento
-    //após a validação adicione uma nova propriedade ao objeto de nome completo com o valor de sua escolha
-    
-    let usuario =  {
-        emailUsuario : inputEmail.value,
-        senhaUsuario : inputSenha.value
-    };
+// function validacao(inputEmail,inputSenha) {
 
-    usuario = {...usuario, emailUsuario, senhaUsuario};
+//     //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
+//     //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
+//     //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha.
 
-    if((inputEmail.value == "") && (inputSenha.value == "")){
-        alert("O preenchimento dos campos são obrigatórios.");
-        return false;
-    }
-    return true;
-    
-// const{emailUsuario,senhaUsuario}=usuario;
-// console.log(`E-mail do Usuário: ${emailUsuario}`);
-// console.log(`Senha do Usuário: ${senhaUsuario}`);
-// usuario = {...usuario, emailUsuario, senhaUsuario};
- }
-    
-    
+//     let usuario = {
+//         emailUsuario : inputEmail.value,
+//         senhaUsuario : inputSenha.value
+//     };
+
+//     if((inputEmail.value == "") && (inputSenha.value == "")){
+//         alert("O preenchimento dos campos são obrigatórios.");
+//         return false;
+//     }
+//     return true;
+// }
+
+
 //8.Arrays
-    
-//9.Objetos
+
+
+
+// //9.Objetos
 // let usuario = {
 //     emailUsuario : "jo@email.com",
 //     senhaUsuario : "123456",
 //     nomeCompleto : "João da Silva"
 // }
-// console.log(usuario.nomeCompleto + ", você está logado com o seu email: "+ usuario.emailUsuario);
-    
-// let propsVariavel = "emailUsuario";
-// console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel]);
+// // console.log(usuario.nomeCompleto + ", você está logado com o seu email: "+ usuario.emailUsuario);
+
+// // let propsVariavel = "emailUsuario";
+// // console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel]);
 // console.log(usuario);
-    
+
 // //OPERADOR SPREAD( ... )
 // usuario = {...usuario, idade:20 , regiao:"São Paulo"};
-    
+
 // console.log(usuario);
-    
+
+
 // //Destructuring
 // const{emailUsuario,idade,regiao}=usuario;
 // console.log(`E-mail do Usuário: ${emailUsuario}`);
 // console.log(`Idade do Usuário: ${idade}`);
 // console.log(`Região de Residência: ${regiao}`);
-    
+
 //10.Funções de array
+
+
