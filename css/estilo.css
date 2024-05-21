@@ -97,3 +97,18 @@ form{
     background-repeat: no-repeat;
     color: #fff;
 }
+
+dialog::backdrop{
+    background-color: rgba(0,0,0, 0.7);
+}
+
+dialog{
+    margin: 5% auto;
+    border: none;
+    border-radius: 5px;
+}
+
+
+.btn-close{
+    
+ }
