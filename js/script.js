@@ -176,3 +176,24 @@ for (let x = 0; x < listaUsuarios.length; x++) {
 //10.Funções de array
 
 
+//Caputurando os botões login,close e o elemento dialog\
+const botaoLogin = document.querySelector("#btnLogin");
+const botaoClose = document.querySelector("#btnClose");
+const modal = document.querySelector("dialog");
+
+//Abrir o modal com o botão de Login através do evento click do botão.
+// botaoLogin.addEventListener("click", function () {
+//     console.log(this);
+// });
+
+// botaoLogin.addEventListener("click", (e)=> {
+//     console.log(e.target);
+// });
+
+botaoLogin.addEventListener("click", (e)=> {
+    modal.showModal();
+});
+
+botaoClose.addEventListener("click", (e)=> {
+    modal.close();
+});
