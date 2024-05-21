@@ -175,4 +175,3 @@ for (let x = 0; x < listaUsuarios.length; x++) {
 
 //10.Funções de array
 
-                          
