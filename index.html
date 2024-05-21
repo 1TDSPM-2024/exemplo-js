@@ -12,50 +12,64 @@
 </head>
 
 <body>
-    
-    <header id="topo">
-        <h1 id="titulo">JavaScript</h1>
-        <nav>
-            <ul>
-                <li class="link"><a href="#">JavaScript</a></li>
-                <li class="link"><a href="#">Java</a></li>
-                <li class="link"><a href="#">C#</a></li>
-            </ul>
-        </nav>
-    </header> 
 
-    <!-- <div>
-        <ul id="tipo-dados"></ul>
-    </div> -->
+    <div>
+        <a href="#" class="meu-botao" id="btnLogin">LOGIN</a>
+    </div>
 
     <div>
         <h2>VALIDAÇÃO</h2>
+    </div>
+
+    <dialog>
         <div>
-            <form action="#" method="get" onsubmit="return validacao(this.idEmail, this.idSenha)">
-                <fieldset>
-                    <legend>LOGIN</legend>
+            <a href="#" class="meu-botao btn-close" id="btnClose"> X </a>
+        </div>
+        <form action="#" method="get" onsubmit="return validacao(idEmail, idSenha)">
+            <fieldset>
+                <legend>LOGIN</legend>
+                <div class="form-group">
                     <div>
                         <label for="idEmail">Email</label>
-                        <input type="email" name="txtEmail" id="idEmail" placeholder="Digite seu email" required minlength="7">
+                        <input 
+                        type="email" 
+                        name="txtEmail" 
+                        id="idEmail" 
+                        placeholder="Digite seu email" 
+                        required 
+                        minlength="7"
+                        class="input-group">
                     </div>
                     <div>
                         <label for="idSenha">Senha</label>
-                        <input type="password" name="txtSenha" id="idSenha" placeholder="Digite sua senha" required minlength="5">
+                        <input 
+                        type="password" 
+                        name="txtSenha" 
+                        id="idSenha" 
+                        placeholder="Digite sua senha" 
+                        required 
+                        minlength="5"
+                        class="input-group">
                     </div>
-                    <div>
+                    <!-- <div>
                         <label for="idCpf">CPF</label>
                         <input type="text" name="txtCpf" id="idCpf" placeholder="Digite seu CPF" required minlength="11">
-                    </div>
+                    </div> -->
                     <div>
-                        <input type="checkbox" name="txtLembrar" id="idLembrar" value="lembrete" checked> 
+                        <input 
+                        type="checkbox" 
+                        name="txtLembrar" 
+                        id="idLembrar" 
+                        value="lembrete" 
+                        checked> 
                         <label for="idLembrar">Lembrar-me</label>
                     </div>
                     <div>
-                        <button type="submit">Enviar</button>
+                        <button type="submit" class="input-group">Enviar</button>
                     </div>
-                </fieldset>
-            </form>
-        </div>
-    </div>
+                </div>
+            </fieldset>
+        </form>
+    </dialog>
 </body>                     
 </html>

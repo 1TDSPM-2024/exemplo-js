@@ -1,29 +1,54 @@
 let listaUsuarios = [
-    {nome: 'João', genero: 'm', email: 'joao@email.com', senha: '12345'},
-    {nome: 'Maria', genero: 'f', email: 'maria@email.com', senha: '12345'},
-    {nome: 'Gabriel', genero: 'm', email: 'gabriel@email.com', senha: '12345'},
-    {nome: 'Debora', genero: 'f', email: 'debora@email.com', senha: '12345'}
-]
+    {nome:"João", genero:"m", email:"jo@email.com", senha:"123456"},
+    {nome:"Maria", genero:"f", email:"ma@email.com", senha:"123456"},
+    {nome:"Roberto", genero:"f", email:"ro@email.com", senha:"123456"},
+    {nome:"Antonio", genero:"m", email:"an@email.com", senha:"123456"},
+    {nome:"Carlos", genero:"m", email:"ca@email.com", senha:"123456"},
+];
 
 
-function validacao(inputEmail, inputSenha) {
+function validacao(inputEmail,inputSenha) {
 
-    for (let x = 0; x < listaUsuarios.length; x++) {
+   //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
+   //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
+   //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha.
 
-        if((inputEmail.value == u.email) && (inputSenha.value == u.senha)){
-            console.log("Usuário", u.nome, "encontrado.");
-            return false;
-        } else {
-            console.log("Usuário não encontrado.")
-            return true;
-        }
+    let usuario = {
+        emailUsuario : inputEmail.value,
+        senhaUsuario : inputSenha.value
     };
 
+
+for (let x = 0; x < listaUsuarios.length; x++) {
+        if((inputEmail.value == listaUsuarios[x].email) && (inputSenha.value == listaUsuarios[x].senha)){
+            console.log("Usuário encontrado");
+            return true;
+        }else{
+            console.log("Usuário não encontrado");
+            return false;
+        }
+}
 }
 
-// --------- 9.Arrays
+// Capturando os botões login, close e o elemento dialog \\
 
-// --------- 10.Objetos
+const botaoLogin = document.querySelector("#btnLogin");
+const botaoClose = document.querySelector("#btnClose");
+const modal = document.querySelector("dialog");
+
+//Abrir o modal com o botão de Login através do evento click do botão
+
+botaoLogin.addEventListener("click", (e)=> {
+    modal.showModal();
+})
+
+botaoClose.addEventListener("click", (e)=> {
+    modal.close();
+})
+
+
+
+// --------- Objetos
 
 // let usuario = {
 //     emailUsuario: "jo@email.com",
@@ -50,7 +75,3 @@ function validacao(inputEmail, inputSenha) {
 // console.log(`E-mail do Usuário: ${emailUsuario}`);
 // console.log(`Idade do Usuário: ${idade}`);
 // console.log(`Região de Residência: ${regiao}`);
-
-
-// --------- 11.Funções de array
-
