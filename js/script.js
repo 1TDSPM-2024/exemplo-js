@@ -165,13 +165,26 @@ function validacao(inputEmail,inputSenha) {
 
 //console.log(usuario);
 
-//Destructuring
-    //Desistrutura para colocar em uma variavel ou separar atributos
-//const{emailUsuario,idade,regiao}=usuario;
-//console.log(`E-mail do Usuario: ${emailUsuario}`);
-//console.log(`Idade do Usuario: ${idade}`);
-//console.log(`Região do Usuario: ${regiao}`);
+// Destructuring
+//     Desistrutura para colocar em uma variavel ou separar atributos
+// const{emailUsuario,idade,regiao}=usuario;
+// console.log(`E-mail do Usuario: ${emailUsuario}`);
+// console.log(`Idade do Usuario: ${idade}`);
+// console.log(`Região do Usuario: ${regiao}`);
 
 //10.Funções de array
 
+//Capturando os botões login,close e o elemento dialog\
+const botaoLogin = document.querySelector("#btnLogin");
+const botaoClose = document.querySelector("#btnClose");
+const modal = document.querySelector("dialog");
+
+//Abri o modal com o botão de Login através do evento click do botão\
+botaoLogin.addEventListener("click", (e)=> {
+    modal.showModal();
+});
+
+botaoClose.addEventListener("click", (e)=> {
+    modal.close();
+});
 
