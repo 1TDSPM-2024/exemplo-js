@@ -1,5 +1,4 @@
 
-
 //JavaScript básico tópicos
 // console.log("Olá Mundo!");
 
@@ -102,39 +101,38 @@
 // const inputEmail = document.querySelector("#idEmail");
 // const inputSenha = document.querySelector("#idSenha");
 
+let listaUsuarios = [
+    {nome:"João", genero:"m", email:"jo@email.com", senha:"123456"},
+    {nome:"Maria", genero:"f", email:"ma@email.com", senha:"123456"},
+    {nome:"Roberto", genero:"f", email:"ro@email.com", senha:"123456"},
+    {nome:"Antonio", genero:"m", email:"an@email.com", senha:"123456"},
+    {nome:"Carlos", genero:"m", email:"ca@email.com", senha:"123456"},
+];
+
+
 function validacao(inputEmail,inputSenha) {
 
-    //Recupere os dados dos campos e adione em um objeto de nome usuário e desestruture o objeto
-    //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimentos.
-    //Após a validação, adicione uma nova propriedade ao objeto de nomeCompleto com o valor de sua escolha 
-
-    let listausuario = [
-        {nome: "João", genero:"m", email:"joao@email.com", senha:"12345"},
-        {nome: "Maria", genero:"f", email:"maria@email.com", senha:"12345"},
-        {nome: "Roberto", genero:"m", email:"roberto@email.com", senha:"12345"},
-        {nome: "Antonio", genero:"m", email:"antonio@email.com", senha:"12345"},
-        {nome: "Carlos", genero:"m", email:"carlos@email.com", senha:"12345"},
-    ];
+//     //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
+//     //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
+//     //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha.
 
     let usuario = {
         emailUsuario : inputEmail.value,
         senhaUsuario : inputSenha.value
     };
 
-    for (let x = 0; x < listausuario.length; x++){
 
-        if((inputEmail.value == listausuario[x].email) && (inputSenha.value == listausuario[x].senha)){
-            console.log("Usuario enontrado");
+for (let x = 0; x < listaUsuarios.length; x++) {
+        if((inputEmail.value == listaUsuarios[x].email) && (inputSenha.value == listaUsuarios[x].senha)){
+            console.log("Usuário encontrado");
             return true;
         }else{
-            console.log("Usuario não enontrado");
+            console.log("Usuário não encontrado");
             return false;
         }
-        
-    };
- 
 }
-
+}
+ 
 // document.getElementById('idCpf').addEventListener('input', function(e) {
 //     var value = e.target.value;
 //     var cpfPattern = value.replace(/\D/g, '')
@@ -145,41 +143,52 @@ function validacao(inputEmail,inputSenha) {
 //     e.target.value = cpfPattern;
 //   });
 
+
 //8.Arrays
 
-//9.Objetos
-//let usuario = {
-    //emailUsuario : "jo@email.com",
-    //senhaUsuario : "123456",
-    //nomeCompleto : "João da Silva"
-//}
-//console.log(usuario.nomeCompleto + ", voce esta logado com o seu email" + usuario.emailUsuario);
 
-//let propsVariavel = "emailUsuario"
-//console.log(usuario["nomeCompleto"] + ", voce esta logado com o seu email" + usuario[propsVariavel]);
-//console.log(usuario);
 
-//OPERADOR SPREAD( ... )
-    //Adicionar atributos em um objeto
-//usuario = {...usuario, idade:20, regiao:"São Paulo"};
+// //9.Objetos
+// let usuario = {
+//     emailUsuario : "jo@email.com",
+//     senhaUsuario : "123456",
+//     nomeCompleto : "João da Silva"
+// }
+// // console.log(usuario.nomeCompleto + ", você está logado com o seu email: "+ usuario.emailUsuario);
 
-//console.log(usuario);
+// // let propsVariavel = "emailUsuario";
+// // console.log(usuario["nomeCompleto"] + ", você está logado com o seu email: "+ usuario[propsVariavel]);
+// console.log(usuario);
 
-// Destructuring
-//     Desistrutura para colocar em uma variavel ou separar atributos
+// //OPERADOR SPREAD( ... )
+// usuario = {...usuario, idade:20 , regiao:"São Paulo"};
+
+// console.log(usuario);
+
+
+// //Destructuring
 // const{emailUsuario,idade,regiao}=usuario;
-// console.log(`E-mail do Usuario: ${emailUsuario}`);
-// console.log(`Idade do Usuario: ${idade}`);
-// console.log(`Região do Usuario: ${regiao}`);
+// console.log(`E-mail do Usuário: ${emailUsuario}`);
+// console.log(`Idade do Usuário: ${idade}`);
+// console.log(`Região de Residência: ${regiao}`);
 
 //10.Funções de array
 
-//Capturando os botões login,close e o elemento dialog\
+
+//Caputurando os botões login,close e o elemento dialog\
 const botaoLogin = document.querySelector("#btnLogin");
 const botaoClose = document.querySelector("#btnClose");
 const modal = document.querySelector("dialog");
 
-//Abri o modal com o botão de Login através do evento click do botão\
+//Abrir o modal com o botão de Login através do evento click do botão.
+// botaoLogin.addEventListener("click", function () {
+//     console.log(this);
+// });
+
+// botaoLogin.addEventListener("click", (e)=> {
+//     console.log(e.target);
+// });
+
 botaoLogin.addEventListener("click", (e)=> {
     modal.showModal();
 });
@@ -187,4 +196,3 @@ botaoLogin.addEventListener("click", (e)=> {
 botaoClose.addEventListener("click", (e)=> {
     modal.close();
 });
-

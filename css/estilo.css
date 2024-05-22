@@ -3,48 +3,74 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*--------px é imutavel-------*/
 
-.meu-botal{
-    text-decoration: none;
+html{
+    font-size: 62.5%;  /*-----É igual a 10px-----*/
 }
 
-.form-group{
+.meu-botao{
+    text-decoration: none;
+    /* background-color: rgb(181, 143, 143); */
+    box-shadow: inset 0 0 10px rgba(206, 29, 29, 0.7);
+    display: block;
+    width: 20vw;
+    margin: 3% auto;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #0000ff;
+    color: #000000;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    transition: all .4s ease-in;
+ }
+
+ .meu-botao:hover{
+    background-color: #0000ff;
+    border: 2px solid brown;
+    color: #fff;
+ }
+
+
+ .form-group{
     display: flex;
     flex-direction: column;
     width: 50vw;
     margin: 0 auto;
-}
-.form-group > div{
+ }
+
+ .form-group > div{
     width: 100%;
     margin: 3% auto;
-}
+ }
 
-/* .form-group input[type=email],input[type=passoword],button[type=submit]{
+ /* .form-group input[type=email],input[type=password],button[type=submit]{
     width: 50vw;
-} */
+ } */
 
-/* OU */
-
-.form-group .input-group{
+ .form-group .input-group{
     display: block;
     width: 50vw;
-    height: 7vw;
+    height: 7vh;
     padding-left: 10px;
     border: none;
     position: relative;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.7);
     border-radius: 5px;
-    outline-color: rgb(165, 165, 165);
+    outline-color: #b7bcb7;
+
 }
 
 .form-group button[type=submit]{
     width: 25vw;
-    height: 7vw;
+    height: 7vh;
     border: 2px solid #fff;
-    background-color: rgb(36, 36, 165);
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+    background-color: #202091; 
+    box-shadow: inset 0 0 10px rgba(0,0,0, 0.7);
     border-radius: 5px;
-    outline-color: rgb(165, 165, 165);
+    outline-color: #b7bcb7;
     color: #fff;
     font-weight: bold;
     margin: 0 auto;
@@ -52,26 +78,52 @@
 }
 
 .form-group button[type=submit]:hover{
-    box-shadow: inset 0 0 10px rgba(206, 206, 206, 0.7);
-
+    box-shadow: inset 0 0 10px rgba(255,255,255, 0.8);
 }
-/* PSEUDOS ELEMENTOS */
+
+
+/*PSEUDOS ELEMENTOS*/
 /* .form-group .input-group::after{
-    content: "______";
+    content: "_____";
     display: block;
     position: absolute;
     left: 47%;
-    top: 21px;
+    top:21px
 }
 
 .form-group .input-group::before{
-    content: "______";
+    content: "_____";
     display: block;
 } */
 
 form{
-    background-image: url("../img/back-login-1280x848.jpg");
+    background-image: url("../img/back-login-1280×848.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     color: #fff;
 }
+
+dialog::backdrop{
+    background-color: rgba(0,0,0, 0.7);
+}
+
+dialog{
+    margin: 5% auto;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-close{
+    margin-right: 1%;
+    padding: 4px;
+    float: right;
+    letter-spacing: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+}
+
+
