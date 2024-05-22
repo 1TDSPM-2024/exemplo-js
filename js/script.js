@@ -113,6 +113,8 @@ let listaUsuarios = [
 
 function validacao(inputEmail,inputSenha) {
 
+    let modalMsg = document.querySelector(".valida");
+
 //     //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
 //     //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
 //     //Após a validação, adicione uma nova propriedade ao objeto de nome nomeCompleto com o valor de sua escolha.
@@ -124,14 +126,33 @@ function validacao(inputEmail,inputSenha) {
 
 
 for (let x = 0; x < listaUsuarios.length; x++) {
-        if((inputEmail.value == listaUsuarios[x].email) && (inputSenha.value == listaUsuarios[x].senha)){
-            console.log("Usuário encontrado");
+    
+    if((inputEmail.value == listaUsuarios[x].email) && (inputSenha.value == listaUsuarios[x].senha)){
+            
+            modalMsg.setAttribute("class","sucesso");
+            modalMsg.innerHTML = "<h2>Login Efetuado com SUCESSO!</h2>";
+            modalMsg.showModal();    
+
+            setTimeout(()=>{
+                modalMsg.innerHTML = "";
+                modalMsg.setAttribute("class","valida");
+                modalMsg.close();    
+            },3000);
+
             return true;
-        }else{
-            console.log("Usuário não encontrado");
-            return false;
         }
 }
+    modalMsg.setAttribute("class","erro");
+    modalMsg.innerHTML = "<h2>Login ou senha incorretos!</h2>";
+    modalMsg.showModal();
+
+    setTimeout(()=>{
+        modalMsg.innerHTML = "";
+        modalMsg.setAttribute("class","valida");
+        modalMsg.close();    
+    },3000);
+    return false;
+
 }
  
 // document.getElementById('idCpf').addEventListener('input', function(e) {
@@ -196,4 +217,4 @@ botaoLogin.addEventListener("click", (e)=> {
 
 botaoClose.addEventListener("click", (e)=> {
     modal.close();
-});
+}); 
