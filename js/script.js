@@ -111,6 +111,8 @@ let listaUsuarios = [
  
  
 function validacao(inputEmail,inputSenha) {
+
+    let modalMsg = document.querySelector(".valida")
  
 //     //Recupere os dados dos campos e adicione em um objeto de nome usuário e desestruture o objeto
 //     //pegando as propriedades e realizando uma validação para ver se as propriedades possuem valores de preenchimento.
@@ -122,16 +124,37 @@ function validacao(inputEmail,inputSenha) {
     };
  
  
-for (let x = 0; x < listaUsuarios.length; x++) {
+
+    for (let x = 0; x < listaUsuarios.length; x++) {
         if((inputEmail.value == listaUsuarios[x].email) && (inputSenha.value == listaUsuarios[x].senha)){
-            console.log("Usuário encontrado");
+
+            modalMsg.setAttribute("class", "sucesso")
+            modalMsg.innerHTML = "<h2>Login Efetuado com Sucesso</h2>"
+            modalMsg.showModal()
+
+            setTimeout(()=>{
+                modalMsg.innerHTML = ""
+                modalMsg.setAttribute("class", "sucesso")
+                modalMsg.close()
+            },3000)
+
             return true;
-        }else{
-            console.log("Usuário não encontrado");
-            return false;
         }
 }
+    modalMsg.setAttribute("class", "erro")
+    modalMsg.innerHTML = "<h2>Login ou Senha incorretos.</h2>"
+    modalMsg.showModal()
+
+    setTimeout(()=>{
+        modalMsg.innerHTML = ""
+        modalMsg.setAttribute("class", "erro")
+        modalMsg.close()
+    },3000)
+
+    return false;
 }
+
+
  
 // document.getElementById('idCpf').addEventListener('input', function(e) {
 //     var value = e.target.value;
