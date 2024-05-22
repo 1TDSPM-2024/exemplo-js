@@ -124,3 +124,21 @@ dialog{
     border-radius: 100%;
     font-size: 1.5rem;
 }
+
+.sucesso{
+    color: #0a840a;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: #7be87b;
+    text-align: center;
+    border: 2px solid #0a840a;
+  }
+
+  .erro{
+    color: #ff0000;
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: #fb9898;
+    text-align: center;
+    border: 2px solid #ff0000;
+  }
