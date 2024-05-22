@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 62.5%;
+}
+
+
+
  .meu-botao{
     text-decoration: none;
     /* background-color: rgb(181, 143, 143); */
@@ -102,9 +108,21 @@ dialog::backdrop{
     background-color: rgba(0,0,0, 0.7);
 }
 
-dialog{
+dialog{ 
     margin: 5% auto;
     border: none;
     border-radius: 5px;
 }
 
+.btn-close{
+    margin-right: 1%;
+    padding: 4px;
+    float: right;
+    letter-spacing: 0;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 100%;
+    font-size: 1.5rem;
+}
