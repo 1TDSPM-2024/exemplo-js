@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 62.5%;
+}
+
  .meu-botao{
     text-decoration: none;
     /* background-color: rgb(181, 143, 143); */
@@ -23,8 +27,8 @@
  }
 
  .meu-botao:hover{
-    background-color: #0000ff;
-    border: 2px solid brown;
+    background-color: #a00d0d;
+    border: 2px solid rgb(0, 0, 0);
     color: #fff;
  }
 
@@ -108,3 +112,13 @@ dialog{
     border-radius: 5px;
 }
 
+.btn-close{
+    background-color: red;
+    border-color: black;
+    letter-spacing: 0px;
+    margin: 1%;
+    padding: 1px;
+    display: block;
+    width: 3vw;
+    float: right;
+}
