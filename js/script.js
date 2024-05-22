@@ -1,7 +1,7 @@
 let listaUsuarios = [
     {nome:"João", genero:"m", email:"jo@email.com", senha:"123456"},
     {nome:"Maria", genero:"f", email:"ma@email.com", senha:"123456"},
-    {nome:"Roberto", genero:"f", email:"ro@email.com", senha:"123456"},
+    {nome:"Roberto", genero:"m", email:"ro@email.com", senha:"123456"},
     {nome:"Antonio", genero:"m", email:"an@email.com", senha:"123456"},
     {nome:"Carlos", genero:"m", email:"ca@email.com", senha:"123456"},
 ];
@@ -19,15 +19,31 @@ function validacao(inputEmail,inputSenha) {
     };
 
 
-for (let x = 0; x < listaUsuarios.length; x++) {
+    let modalMsg = document.querySelector(".valida")
+
+    for (let x = 0; x < listaUsuarios.length; x++) {
         if((inputEmail.value == listaUsuarios[x].email) && (inputSenha.value == listaUsuarios[x].senha)){
             console.log("Usuário encontrado");
+            modalMsg.setAttribute("class", "sucesso");
+            modalMsg.innerHTML = "<h2>Login efeituado com sucesso!</h2>";
+            modalMsg.showModal();
+            setTimeout(()=>{
+                modalMsg.close();
+                modalMsg.setAttribute("class", "valida");
+            }, 3000);
             return true;
-        }else{
-            console.log("Usuário não encontrado");
-            return false;
         }
-}
+    }
+    // se não validado
+    console.log("Usuário não encontrado");
+    modalMsg.setAttribute("class", "erro");
+    modalMsg.innerHTML = "<h2>Login ou senha incorreto(s)!</h2>"
+    modalMsg.showModal();
+    setTimeout(()=>{
+        modalMsg.close();
+        modalMsg.setAttribute("class", "valida");
+    }, 3000);
+    return false;
 }
 
 // Capturando os botões login, close e o elemento dialog \\
